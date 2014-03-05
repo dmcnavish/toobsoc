@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+	<display-name>toobsoc</display-name>
+	<description>Handles interactions with third-party device retailers.</description>
+
+	<filter>
+		<filter-name>AttFilter</filter-name>
+		<filter-class>spark.servlet.SparkFilter</filter-class>
+		<init-param>
+			<param-name>applicationClass</param-name>
+			<param-value>com.mcnavish.toobsoc.handlers.AttHandler</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>SprintFilter</filter-name>
+		<filter-class>spark.servlet.SparkFilter</filter-class>
+		<init-param>
+			<param-name>applicationClass</param-name>
+			<param-value>com.mcnavish.toobsoc.handlers.SprintHandler</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>AttFilter</filter-name>
+		<url-pattern>/att/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SprintFilter</filter-name>
+		<url-pattern>/sprint/*</url-pattern>
+	</filter-mapping>
+</web-app>
