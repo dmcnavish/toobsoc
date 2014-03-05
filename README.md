@@ -10,4 +10,3 @@ run: "gradle eclipse" to import into Eclipse, or "gradle war" to generate a .war
 Once running, invoke with
 
 http://localhost/nqtraverse/att/provision
-http://localhost/nqtraverse/att/provision/test
