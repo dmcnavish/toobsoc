@@ -10,3 +10,5 @@ run: "gradle eclipse" to import into Eclipse, or "gradle war" to generate a .war
 Once running, invoke with
 
 http://localhost/nqtraverse/att/provision
+
+Spark Micro Web Framework: http://www.sparkjava.com/
